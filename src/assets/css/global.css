@@ -3,8 +3,33 @@
     --blue: #1F7087;
     --pink: #952175;
     --yellow: #F2B43B;
+    --success: #1BA345;
 }
 
 .pa-10 {
     padding: 10px !important;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.w-percent-100 {
+    width: 100%;
+}
+
+.w-percent-50 {
+    width: 50%;
 }
