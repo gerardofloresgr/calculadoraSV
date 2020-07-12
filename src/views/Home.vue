@@ -13,7 +13,7 @@
                 <v-card-title class="headline">Calculo de la renta</v-card-title>
                 <v-card-subtitle>Renta por servicios</v-card-subtitle>
                 <v-card-actions>
-                <v-btn text>Calcular</v-btn>
+                <v-btn text @click="$global.toNavigate($router, 'muypronto')">Calcular</v-btn>
                 </v-card-actions>
             </v-card>
             <br>
@@ -21,7 +21,7 @@
                 <v-card-title class="headline">Indemnización por despido</v-card-title>
                 <v-card-subtitle>Calculo de liquidación</v-card-subtitle>
                 <v-card-actions>
-                <v-btn text>Calcular</v-btn>
+                <v-btn text @click="$global.toNavigate($router, 'muypronto')">Calcular</v-btn>
                 </v-card-actions>
             </v-card>
             <br>
@@ -29,7 +29,7 @@
                 <v-card-title class="headline">IVA + CESC</v-card-title>
                 <v-card-subtitle>Impuesto a las telecomunicaciones</v-card-subtitle>
                 <v-card-actions>
-                <v-btn text>Calcular</v-btn>
+                <v-btn text @click="$global.toNavigate($router, 'muypronto')">Calcular</v-btn>
                 </v-card-actions>
             </v-card>
         </v-container>

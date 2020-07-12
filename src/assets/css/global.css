@@ -6,6 +6,10 @@
     --success: #1BA345;
 }
 
+.mr-10 {
+    margin-right: 10px;
+}
+
 .pa-10 {
     padding: 10px !important;
 }

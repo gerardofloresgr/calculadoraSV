@@ -8,12 +8,18 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: { transition: 'fade-in-left' }
   },
   {
     path: '/salario',
     name: 'Salario',
     component: () => import(/* webpackChunkName: "about" */ '../views/Salario.vue')
+  },
+  {
+    path: '/muypronto',
+    name: 'Muy Pronto',
+    component: () => import(/* webpackChunkName: "about" */ '../views/MuyPronto.vue')
   }
 ]
 

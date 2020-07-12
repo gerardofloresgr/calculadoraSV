@@ -50,7 +50,7 @@ export default {
   name: "Salario",
   data() {
     return {
-      salario: 0,
+      salario: "",
       CF1: 17.67,
       CF2: 60.0,
       CF3: 288.57,

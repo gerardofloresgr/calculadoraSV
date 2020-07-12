@@ -1,28 +1,38 @@
 <template>
-    <div class="navbar">
-        <img src="@/assets/img/logo.svg">
-        <span>CalculadoraSV</span>
-    </div>
+  <div class="navbar">
+    <template v-if="route == 'Home'">
+      <img src="@/assets/img/logo.svg" />
+    </template>
+    <template v-else>
+        <v-icon dark @click="$global.toNavigate($router, '')" class="mr-10">keyboard_backspace</v-icon>
+    </template>
+    <span>CalculadoraSV</span>
+  </div>
 </template>
 
 <script>
 export default {
-    name: "NavBar"
-}
+  name: "NavBar",
+  computed: {
+    route() {
+      return this.$route.name;
+    }
+  }
+};
 </script>
 
 <style scoped>
 .navbar {
-    background: var(--primary);
-    color: white;
-    font-size: larger;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    font-weight: 600;
+  background: var(--primary);
+  color: white;
+  font-size: larger;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
 }
 .navbar img {
-    width: 30px;
-    margin-right: 20px;
+  width: 30px;
+  margin-right: 20px;
 }
 </style>
