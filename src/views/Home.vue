@@ -29,7 +29,7 @@
                 <v-card-title class="headline">IVA + CESC</v-card-title>
                 <v-card-subtitle>Impuesto a las telecomunicaciones</v-card-subtitle>
                 <v-card-actions>
-                <v-btn text @click="$global.toNavigate($router, 'muypronto')">Calcular</v-btn>
+                <v-btn text @click="$global.toNavigate($router, 'cesc')">Calcular</v-btn>
                 </v-card-actions>
             </v-card>
         </v-container>

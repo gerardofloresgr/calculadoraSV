@@ -17,6 +17,11 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/Salario.vue')
   },
   {
+    path: '/cesc',
+    name: 'Iva y CESC',
+    component: () => import(/* webpackChunkName: "about" */ '../views/CESC.vue')
+  },
+  {
     path: '/muypronto',
     name: 'Muy Pronto',
     component: () => import(/* webpackChunkName: "about" */ '../views/MuyPronto.vue')

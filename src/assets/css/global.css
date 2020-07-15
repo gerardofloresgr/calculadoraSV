@@ -37,3 +37,22 @@
 .w-percent-50 {
     width: 50%;
 }
+
+.total {
+    background: var(--success);
+    color: white;
+    padding: 20px;
+  }
+  .total .title {
+    font-weight: bold;
+    font-size: x-large;
+  }
+  .total .w-percent-100 {
+    margin-top: 20px;
+  }
+  .w-percent-50 {
+    font-size: x-large;
+  }
+  .w-percent-50 p {
+    margin-top: 10px;
+  }

@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container>
-      <v-text-field label="Ingresa tu salario" v-model="salario" type="number" prefix="$"></v-text-field>
+      <v-text-field label=" Ingresa tu salario" v-model="salario" type="number" prefix="$"></v-text-field>
       <br />
       <div>
         <b>AFP:</b>
@@ -19,27 +19,24 @@
       </div>
       <br />
       <div>
-        <b>Renta (Cuota fija): </b>
+        <b>Renta (Cuota fija):</b>
         <template v-if="renta == 0">No paga renta</template>
         <template v-else>${{ renta }}</template>
       </div>
-      <br><br>
+      <br />
+      <br />
       <div class="total">
-          <span class="title">Salario devengado:</span>
-          <div class="flex w-percent-100">
-              <div class="w-percent-50 flex flex-column aling-center">
-                  <span>
-                      Quinsenal
-                  </span>
-                  <p>${{quincenal}}</p>
-              </div>
-              <div class="w-percent-50 flex flex-column aling-center">
-                  <span>
-                      Mensual
-                  </span>
-                  <p>${{mensual}}</p>
-              </div>
+        <span class="title">Salario devengado:</span>
+        <div class="flex w-percent-100">
+          <div class="w-percent-50 flex flex-column aling-center">
+            <span>Quinsenal</span>
+            <p>${{quincenal}}</p>
           </div>
+          <div class="w-percent-50 flex flex-column aling-center">
+            <span>Mensual</span>
+            <p>${{mensual}}</p>
+          </div>
+        </div>
       </div>
     </v-container>
   </div>
@@ -109,30 +106,11 @@ export default {
       this.isss = this.$global.round(tmpIsss);
 
       //Calcular total a pagar
-      this.mensual = this.$global.round(this.salario - this.isss - this.afp - this.renta);
+      this.mensual = this.$global.round(
+        this.salario - this.isss - this.afp - this.renta
+      );
       this.quincenal = this.$global.round(this.mensual / 2);
     }
   }
 };
 </script>
-
-<style scoped>
-.total {
-    background: var(--success);
-    color: white;
-    padding: 20px;
-}
-.total .title {
-    font-weight: bold;
-    font-size: x-large;
-}
-.total .w-percent-100 {
-    margin-top: 20px;
-}
-.w-percent-50 {
-    font-size: x-large;
-}
-.w-percent-50 p {
-    margin-top: 10px;
-}
-</style>
