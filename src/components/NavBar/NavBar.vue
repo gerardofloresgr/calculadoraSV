@@ -35,6 +35,7 @@ export default {
   font-weight: 600;
   position: fixed;
   width: 100%;
+  z-index: 100000;
 }
 .navbar img {
   width: 30px;
