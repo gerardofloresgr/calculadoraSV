@@ -17,7 +17,7 @@
         <b>CECS (5%):</b>
         ${{ cecs }}
       </div>
-      <br/>
+      <br />
       <div>
         <b>Total + IVA + CECS:</b>
         ${{ total }}
@@ -29,7 +29,11 @@
         <div class="flex w-percent-100">
           <div class="w-percent-50 flex flex-column aling-center">
             <span>Sin impuestos</span>
-            <p>$<template v-if="precio != ''">{{precio}}</template><template v-else>0</template></p>
+            <p>
+              $
+              <template v-if="precio != ''">{{precio}}</template>
+              <template v-else>0</template>
+            </p>
           </div>
           <div class="w-percent-50 flex flex-column aling-center">
             <span>Con impuestos</span>
@@ -51,19 +55,22 @@ export default {
   },
   computed: {
     iva() {
-      return this.precio * 0.13;
+      return this.$global.round(this.precio * 0.13);
     },
     cecs() {
-      return this.precio * 0.05;
+      return this.$global.round(this.precio * 0.05);
     },
     total() {
-        let tmp;
-        if (this.precio != "") {
-            tmp = parseFloat(this.precio) + parseFloat(this.iva) + parseFloat(this.cecs);
-        } else {
-            tmp = 0;
-        }
-        return tmp;
+      let tmp;
+      if (this.precio != "") {
+        tmp =
+          parseFloat(this.precio) +
+          parseFloat(this.iva) +
+          parseFloat(this.cecs);
+      } else {
+        tmp = 0;
+      }
+      return this.$global.round(tmp);
     }
   }
 };
