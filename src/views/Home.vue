@@ -17,7 +17,7 @@
                 </v-card-actions>
             </v-card>
             <br>
-            <v-card color="var(--pink)" dark @click="$global.toNavigate($router, 'muypronto')">
+            <v-card color="var(--pink)" dark @click="$global.toNavigate($router, 'despido')">
                 <v-card-title class="headline">Indemnización por despido</v-card-title>
                 <v-card-subtitle>Calculo de liquidación</v-card-subtitle>
                 <v-card-actions>

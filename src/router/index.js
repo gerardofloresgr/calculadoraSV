@@ -22,6 +22,11 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/CESC.vue')
   },
   {
+    path: '/despido',
+    name: 'Despido',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Despido.vue')
+  },
+  {
     path: '/muypronto',
     name: 'Muy Pronto',
     component: () => import(/* webpackChunkName: "about" */ '../views/MuyPronto.vue')
