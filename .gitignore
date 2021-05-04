@@ -1,6 +1,9 @@
 .DS_Store
 node_modules
 /dist
+artes
+key
+public
 
 # local env files
 .env.local
